@@ -113,12 +113,10 @@
 	  		width: 10px;
 	  		height: 10px;
 	  		position: absolute;
- 			background-color: red;
-		 	display: inline-block;
 		  	margin: 0 10px;
 		  	top: calc(50% - 5px);
 		  	right: -30px;
-	  		border: 2px solid rgba(255,255,255,0.2);
+		  	border: 2px solid rgba(255,255,255,0.2);
 	  		border-bottom: none;
 	  		border-left: none;
 	  		border-radius: 2px;
@@ -1012,7 +1010,7 @@
 			    "source": "Master Oogway"
 			  },
 			]
-			setInterval(randomQuote, 500);
+			setInterval(randomQuote, 4000);
 			function randomQuote(){
 			  let random = quotes[Math.floor(Math.random() * quotes.length)];
 			  quotation.innerText = `"${random.quote}"`;
