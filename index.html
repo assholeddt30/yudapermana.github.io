@@ -540,13 +540,13 @@
 				    });
 				    localStorage.setItem("manualColor", "");
 			}
-			$(".panah").click(function(){
+			$(".heart").click(function(){
 				if (tombol==false){
-					$(".panah").css("transform","rotate(225deg)");
+					$(".heart").css("transform","rotate(225deg)");
 					$(".kontrol").animate({left: "10px"});
 					tombol=true;
 				}else if (tombol==true){
-					$(".panah").css("transform","rotate(45deg)");
+					$(".heart").css("transform","rotate(45deg)");
 					$(".kontrol").animate({left: "-220px"});
 					tombol=false;
 				}
