@@ -108,23 +108,25 @@
 	  		transition: all 1 ease;
 	  		z-index: 99;
 	  	}
-	  	.heart{
+	  	  .panah{
 	  		content: '';
 	  		width: 10px;
 	  		height: 10px;
 	  		position: absolute;
-		  	margin: 0 10px;
-		  	top: calc(50% - 5px);
-		  	right: -30px;
-		  	border: 2px solid rgba(255,255,255,0.2);
+	  		top: calc(50% - 5px);
+	  		right: -30px;
+	  		border: 2px solid rgba(255,255,255,0.2);
 	  		border-bottom: none;
 	  		border-left: none;
 	  		border-radius: 2px;
 	  		border-top-left-radius: 3px;
 	  		border-bottom-right-radius: 3px;
 	  		transform: rotate(45deg);
-	  		z-index: 50
-		}
+	  		z-index: 50;
+	  	}
+	  	#color-picker{
+	  		width: 100%;
+	  	}
 	  	.note{
 	  		color: white;
 	  		transition: all 2s ease;
@@ -807,7 +809,7 @@
 					}
 				}
 			}
-			setInterval(gaming1, 4000);
+			setInterval(gaming1, 5000);
 			function black(){
 				$(".jam").css("color","#000");
 				$(".ucapan").css("color","#000");
@@ -1010,7 +1012,7 @@
 			    "source": "Master Oogway"
 			  },
 			]
-			setInterval(randomQuote, 40000);
+			setInterval(randomQuote, 60000);
 			function randomQuote(){
 			  let random = quotes[Math.floor(Math.random() * quotes.length)];
 			  quotation.innerText = `"${random.quote}"`;
