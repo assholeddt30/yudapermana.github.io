@@ -109,30 +109,23 @@
 	  		z-index: 99;
 	  	}
 	  	.heart{
+	  		content: '';
+	  		width: 10px;
+	  		height: 10px;
+	  		position: absolute;
  			background-color: red;
 		 	display: inline-block;
-		  	height: 10px;
 		  	margin: 0 10px;
-		  	position: relative;
-		  	top: 0;
-		  	transform: rotate(-45deg);
-		  	width: 30px;
-		}
-		.heart:after {
-			 content: "";
-			 background-color: red;
-		  	 border-radius: 50%;
-			 height: 10px;
-			 position: absolute;
-			 width: 30px;
-		}
-		.heart:before {
-		  	top: -15px;
-		  	left: 0;
-		}
-		.heart:after {
-		  	left: 15px;
-		  	top: 0;
+		  	top: calc(50% - 5px);
+		  	right: -30px;
+	  		border: 2px solid rgba(255,255,255,0.2);
+	  		border-bottom: none;
+	  		border-left: none;
+	  		border-radius: 2px;
+	  		border-top-left-radius: 3px;
+	  		border-bottom-right-radius: 3px;
+	  		transform: rotate(45deg);
+	  		z-index: 50
 		}
 	  	.note{
 	  		color: white;
@@ -879,7 +872,7 @@
 					txt2=txt;
 				}
 				else if(H<12){
-					txt='Good Evening,I Love U :*';
+					txt='Good Morning,I Love U :*';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
