@@ -108,7 +108,7 @@
 	  		transition: all 1 ease;
 	  		z-index: 99;
 	  	}
-	  	  .panah{
+	  	.panah{
 	  		content: '';
 	  		width: 10px;
 	  		height: 10px;
@@ -124,6 +124,8 @@
 	  		transform: rotate(45deg);
 	  		z-index: 50;
 	  	}
+	  	#color-picker{
+	  		width: 100%;
 	  	#color-picker{
 	  		width: 100%;
 	  	}
@@ -526,13 +528,13 @@
 				    });
 				    localStorage.setItem("manualColor", "");
 			}
-			$(".heart").click(function(){
+			$(".panah").click(function(){
 				if (tombol==false){
-					$(".heart").css("transform","rotate(225deg)");
+					$(".panah").css("transform","rotate(225deg)");
 					$(".kontrol").animate({left: "10px"});
 					tombol=true;
 				}else if (tombol==true){
-					$(".heart").css("transform","rotate(45deg)");
+					$(".panah").css("transform","rotate(45deg)");
 					$(".kontrol").animate({left: "-220px"});
 					tombol=false;
 				}
