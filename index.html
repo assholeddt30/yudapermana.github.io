@@ -108,7 +108,7 @@
 	  		transition: all 1 ease;
 	  		z-index: 99;
 	  	}
-	  	.panah{
+	  	..panah{
 	  		content: '';
 	  		width: 10px;
 	  		height: 10px;
@@ -126,7 +126,7 @@
 	  	}
 	  	#color-picker{
 	  		width: 100%;
-		  }
+	  	}
 	  	.note{
 	  		color: white;
 	  		transition: all 2s ease;
@@ -391,6 +391,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+		<script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/green-bintang-jatuh.js"></script>
 		<script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/efek-salju.js"></script>
 		<script type="text/javascript">
 			gaming=false;
@@ -529,7 +530,7 @@
 			$(".panah").click(function(){
 				if (tombol==false){
 					$(".panah").css("transform","rotate(225deg)");
-					$(".kontrol").animate({left: "10px"});
+					$(".kontrol").animate({left: "0px"});
 					tombol=true;
 				}else if (tombol==true){
 					$(".panah").css("transform","rotate(45deg)");
@@ -809,7 +810,7 @@
 					}
 				}
 			}
-			setInterval(gaming1, 5000);
+			setInterval(gaming1, 4000);
 			function black(){
 				$(".jam").css("color","#000");
 				$(".ucapan").css("color","#000");
@@ -860,25 +861,25 @@
 				S=s;
 
 				if (H<05){
-					txt='Good Night,Have A Nice Dream :*';
+					txt='Good Night:)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
 				else if(H<09){
-					txt='Good Morning, Have A Nice Day:*';
+					txt='Good Morning, Have A Nice Day:)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
 				else if(H<12){
-					txt='Good Morning,I Love U :*';
+					txt='I Hope You Happy Today:)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
 				else if(H<16){
-					txt='Good Afternoon Sweetie :*';
+					txt='Good Afternoon:)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
@@ -890,7 +891,7 @@
 					txt2=txt;
 				}
 				else if(H<23){
-					txt='Good Evening,Babe :*';
+					txt='Good Evening:)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
@@ -926,7 +927,6 @@
 						evening();
 					}
 				}
-
 				m = checkTime(m);
 				s = checkTime(s);
 				document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
@@ -1012,7 +1012,7 @@
 			    "source": "Master Oogway"
 			  },
 			]
-			setInterval(randomQuote, 60000);
+			setInterval(randomQuote, 50000);
 			function randomQuote(){
 			  let random = quotes[Math.floor(Math.random() * quotes.length)];
 			  quotation.innerText = `"${random.quote}"`;
